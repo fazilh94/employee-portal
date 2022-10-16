@@ -1,0 +1,33 @@
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold">{{selectedEmployee.firstName | titlecase}} {{selectedEmployee.lastName | titlecase}}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">{{selectedEmployee.experienceBlocks[0].title}}</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Education</h5>
+          <p class="card-text"></p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let education of selectedEmployee.educationBlocks">{{education.degree}} in {{education.fieldOfStudy}} from {{education.school}}</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Experience</h5>
+          <p class="card-text"></p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let experience of selectedEmployee.experienceBlocks">{{experience.title}} at {{experience.company}} from {{experience.startDate | date}} to {{experience.endDate | date}}</li>  
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

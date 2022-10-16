@@ -1,0 +1,395 @@
+<div class="card">
+    <h5 class="card-header">
+      Employee Info
+    </h5>
+  
+    <div class="card-body">
+      <form novalidate (ngSubmit)="save()" [formGroup]="employeeBuilderForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstNameId">First Name</label>
+            <input
+              class="form-control"
+              id="firstNameId"
+              type="text"
+              placeholder="First Name"
+              formControlName="firstName"
+              [ngClass]="{
+                'is-invalid':
+                  (firstName.touched ||
+                    firstName.dirty) &&
+                  !firstName.valid
+              }"
+            />
+            <span class="invalid-feedback">
+              <span *ngIf="firstName.errors?.['required']">
+                Please enter your first name.
+              </span>
+            </span>
+          </div>
+  
+          <div class="form-group col-md-6">
+            <label for="lastNameId">Last Name</label>
+            <input
+              class="form-control"
+              id="lastNameId"
+              type="text"
+              placeholder="Last Name"
+              formControlName="lastName"
+              [ngClass]="{
+                'is-invalid':
+                  (lastName.touched ||
+                    lastName.dirty) &&
+                  !lastName.valid
+              }"
+            />
+            <span class="invalid-feedback">
+              <span *ngIf="lastName.errors?.['required']">
+                Please enter your last name.
+              </span>
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="emailId">Email</label>
+            <input
+              class="form-control"
+              id="emailId"
+              type="email"
+              placeholder="Email"
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid':
+                  (email.touched ||
+                    email.dirty) &&
+                  !email.valid
+              }"
+            />
+            <span class="invalid-feedback">
+              <span *ngIf="email.errors?.['required']">
+                Please enter your email.
+              </span>
+              <span *ngIf="email.errors?.['email']">
+                Please enter right email format.
+              </span>
+            </span>
+          </div>
+  
+        <div class="form-group col-md-6">
+            <label for="phoneId">Phone</label>
+            <input
+              class="form-control"
+              id="phoneId"
+              type="tel"
+              placeholder="Phone"
+              formControlName="phone"
+              [ngClass]="{ 'is-invalid': !phone.valid }"
+            />
+            <span class="invalid-feedback">
+              <span *ngIf="phone.errors?.['required']">
+                Please enter your phone number.
+              </span>
+            </span>
+          </div>
+        </div>
+        <br />
+        <hr>
+        <div class="flexContainer">
+          <h5>Experience</h5>
+          <a (click)="addExperience()">
+            <i class="bi bi-plus-circle"></i>
+          </a>
+        </div>
+        <div
+          formArrayName="experienceBlocks"
+          *ngFor="let experience of experienceBlocks.controls; let i = index"
+        >
+          <div
+            [ngClass]="{
+              'experience-block': experienceBlocks.controls.length > 1
+            }"
+            [formGroupName]="i"
+          >
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label attr.for="{{ 'titleId' + i }}">Title</label>
+                <input
+                  class="form-control"
+                  id="{{ 'titleId' + i }}"
+                  type="text"
+                  placeholder="Ex: Software Engineer"
+                  formControlName="title" [ngClass]="{
+                    'is-invalid':
+                      (experience.get('title')?.touched ||
+                      experience.get('title')?.dirty) &&
+                      !experience.get('title')?.valid
+                  }"
+                />
+                <span class="invalid-feedback">
+                  <span *ngIf="experience.get('title')?.errors?.['required']">
+                    Please enter title.
+                  </span>
+                </span>
+              </div>
+              <div class="form-group col-md-6">
+                <label attr.for="{{ 'companyId' + i }}">Company</label>
+                <input
+                  class="form-control"
+                  id="{{ 'companyId' + i }}"
+                  type="text"
+                  placeholder="Ex: Microsoft"
+                  formControlName="company" [ngClass]="{
+                    'is-invalid':
+                      (experience.get('company')?.touched ||
+                      experience.get('company')?.dirty) &&
+                      !experience.get('company')?.valid
+                  }"
+                />
+                <span class="invalid-feedback">
+                  <span *ngIf="experience.get('company')?.errors?.['required']">
+                    Please enter Company Name.
+                  </span>
+                </span>
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label attr.for="{{ 'locationId' + i }}">Location</label>
+                <input
+                  class="form-control"
+                  id="{{ 'locationId' + i }}"
+                  type="text"
+                  placeholder="Ex: London, United Kingdom"
+                  formControlName="location" [ngClass]="{
+                    'is-invalid':
+                      (experience.get('location')?.touched ||
+                      experience.get('location')?.dirty) &&
+                      !experience.get('location')?.valid
+                  }"
+                />
+                <span class="invalid-feedback">
+                  <span *ngIf="experience.get('location')?.errors?.['required']">
+                    Please enter Location.
+                  </span>
+                </span>
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label attr.for="{{ 'startDateId' + i }}">Start Date</label>
+                <input
+                  class="form-control"
+                  id="{{ 'startDateId' + i }}"
+                  type="date"
+                  placeholder=""
+                  formControlName="startDate" [ngClass]="{
+                    'is-invalid':
+                      (experience.get('startDate')?.touched ||
+                      experience.get('startDate')?.dirty) &&
+                      !experience.get('startDate')?.valid
+                  }"
+                />
+                <span class="invalid-feedback">
+                  <span *ngIf="experience.get('startDate')?.errors?.['required']">
+                    Please enter Start Date.
+                  </span>
+                </span>
+              </div>
+              <div class="form-group col-md-6">
+                <label attr.for="{{ 'endDateId' + i }}">End Date</label>
+                <input
+                  class="form-control"
+                  id="{{ 'endDateId' + i }}"
+                  type="date"
+                  placeholder="End Date"
+                  formControlName="endDate" [ngClass]="{
+                    'is-invalid':
+                      (experience.get('endDate')?.touched ||
+                      experience.get('endDate')?.dirty) &&
+                      !experience.get('endDate')?.valid
+                  }"
+                />
+                <span class="invalid-feedback">
+                  <span *ngIf="experience.get('endDate')?.errors?.['required']">
+                    Please enter end Date.
+                  </span>
+                </span>
+              </div>
+            </div>
+  
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label attr.for="{{ 'descId' + i }}">Description</label>
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  id="{{ 'descId' + i }}"
+                  type="text"
+                  placeholder="Description"
+                  formControlName="description" [ngClass]="{
+                    'is-invalid':
+                      (experience.get('description')?.touched ||
+                      experience.get('description')?.dirty) &&
+                      !experience.get('description')?.valid
+                  }"
+                ></textarea>
+                <span class="invalid-feedback">
+                  <span *ngIf="experience.get('description')?.errors?.['required']">
+                    Please enter Description.
+                  </span>
+                </span>  
+              </div>
+            </div>
+            <hr *ngIf="i !== experienceBlocks.controls.length - 1" />
+          </div>
+        </div>
+        <br>
+        <hr>
+        <div class="flexContainer">
+            <h5>Education</h5>
+            <a (click)="addEducation()">
+                <i class="bi bi-plus-circle"></i>
+                </a>
+        </div>
+        <div
+        formArrayName="educationBlocks"
+        *ngFor="let education of educationBlocks.controls; let i = index"
+      >
+        <div
+          [ngClass]="{
+            'education-block': educationBlocks.controls.length > 1
+          }"
+          [formGroupName]="i"
+        >
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label attr.for="{{ 'schoolId' + i }}">School/University</label>
+              <input
+                class="form-control"
+                id="{{ 'schoolId' + i }}"
+                type="text"
+                placeholder="Ex: Concordia University"
+                formControlName="school" [ngClass]="{
+                  'is-invalid':
+                    (education.get('school')?.touched ||
+                    education.get('school')?.dirty) &&
+                    !education.get('school')?.valid
+                }"
+              />
+              <span class="invalid-feedback">
+                <span *ngIf="education.get('school')?.errors?.['required']">
+                  Please enter School Name.
+                </span>
+              </span>
+            </div>
+            <div class="form-group col-md-6">
+              <label attr.for="{{ 'degreeId' + i }}">Degree</label>
+              <input
+                class="form-control"
+                id="{{ 'degreeId' + i }}"
+                type="text"
+                placeholder="Ex: Masters"
+                formControlName="degree" [ngClass]="{
+                  'is-invalid':
+                    (education.get('degree')?.touched ||
+                    education.get('degree')?.dirty) &&
+                    !education.get('degree')?.valid
+                }"
+              />
+              <span class="invalid-feedback">
+                <span *ngIf="education.get('degree')?.errors?.['required']">
+                  Please enter Degree.
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label attr.for="{{ 'fieldOfStudyId' + i }}">Field of Study</label>
+              <input
+                class="form-control"
+                id="{{ 'fieldOfStudyId' + i }}"
+                type="text"
+                placeholder="Ex: Computer Science"
+                formControlName="fieldOfStudy" [ngClass]="{
+                  'is-invalid':
+                    (education.get('fieldOfStudy')?.touched ||
+                    education.get('fieldOfStudy')?.dirty) &&
+                    !education.get('fieldOfStudy')?.valid
+                }"
+              />
+              <span class="invalid-feedback">
+                <span *ngIf="education.get('fieldOfStudy')?.errors?.['required']">
+                  Please enter field of study.
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label attr.for="{{ 'startDateId' + i }}">Start Date</label>
+              <input
+                class="form-control"
+                id="{{ 'startDateId' + i }}"
+                type="date"
+                placeholder=""
+                formControlName="startDate" [ngClass]="{
+                  'is-invalid':
+                    (education.get('startDate')?.touched ||
+                    education.get('startDate')?.dirty) &&
+                    !education.get('startDate')?.valid
+                }"
+              />
+              <span class="invalid-feedback">
+                <span *ngIf="education.get('startDate')?.errors?.['required']">
+                  Please enter Start Date.
+                </span>
+              </span>
+            </div>
+            <div class="form-group col-md-6">
+              <label attr.for="{{ 'endDateId' + i }}">End Date</label>
+              <input
+                class="form-control"
+                id="{{ 'endDateId' + i }}"
+                type="date"
+                placeholder="End Date"
+                formControlName="endDate" [ngClass]="{
+                  'is-invalid':
+                    (education.get('endDate')?.touched ||
+                    education.get('endDate')?.dirty) &&
+                    !education.get('endDate')?.valid
+                }"
+              />
+              <span class="invalid-feedback">
+                <span *ngIf="education.get('endDate')?.errors?.['required']">
+                  Please enter End Date.
+                </span>
+              </span>
+            </div>
+          </div>
+          <hr *ngIf="i !== educationBlocks.controls.length - 1" />
+        </div>
+      </div>
+        <button
+          class="btn btn-primary"
+          type="submit"
+          style="width:100px"
+          [title]="
+            employeeBuilderForm.valid
+              ? 'Save your entered data'
+              : 'Disabled until the form data is valid'
+          "
+          [disabled]="!employeeBuilderForm.valid"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  

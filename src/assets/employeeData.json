@@ -1,0 +1,227 @@
+[
+    {
+        "firstName": "fazil",
+        "lastName": "hussain1",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain2",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain3",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain4",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain5",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain6",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    },
+    {
+        "firstName": "fazil",
+        "lastName": "hussain7",
+        "email": "faz97@gmail.com",
+        "phone": "5145737175",
+        "educationBlocks": [
+            {
+                "school": "Concordia University",
+                "degree": "Masters",
+                "fieldOfStudy": "Electrical and Computer Engineering",
+                "startDate": "2021-01-12",
+                "endDate": "2022-08-24"
+            }
+        ],
+        "experienceBlocks": [
+            {
+                "title": "Tech Analyst",
+                "company": "Infosys",
+                "location": "Hyderabad",
+                "startDate": "2015-06-13",
+                "endDate": "2021-01-06",
+                "description": "Worked as an Angular Developer"
+            }
+        ]
+    }
+]

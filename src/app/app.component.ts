@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'resume-builder';
+  title = 'Employee Portal';
+constructor(private route:Router){
+
+}
+  checkstate():boolean{
+    if(this.route.url==='/employeeportfolio'){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
