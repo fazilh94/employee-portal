@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
+import { GridApi } from 'ag-grid-community';
 import { Employee } from '../employee';
 import { EmployeeStoreService } from '../employee-store.service';
 import { BtnCellRenderer } from './button-cell-renderer.component';
@@ -14,8 +15,9 @@ import { BtnCellRenderer } from './button-cell-renderer.component';
   styleUrls: ['./employee-details.component.scss']
 })
 export class EmployeeDetailsComponent {
-
+  private gridApi!: GridApi;
   rowData: Employee | any=[];
+  public domLayout: 'normal' | 'autoHeight' | 'print' = 'autoHeight';
   defaultColDef = {
     sortable: true,
     filter:true
@@ -26,6 +28,9 @@ export class EmployeeDetailsComponent {
 
   onGridReady(params:any) {
     this.rowData=this.store.getEmployees();
+    params.api.sizeColumnsToFit();
+    this.gridApi = params.api ;
+    this.gridApi.setDomLayout('autoHeight');
   }
 
   columnDefs = [
